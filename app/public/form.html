@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+  <div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+    <p id="description" class="description text-center">
+      Thank you for taking the time to help us improve the platform
+    </p>
+  </header>
+  <form id="survey-form">
+    <div class="form-element">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-input"
+        placeholder="Enter your name"
+        oninvalid="this.setCustomValidity('Name Required')"
+        oninput="this.setCustomValidity('')"
+        required
+      />
+    </div>
+    <div class="form-element">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-input"
+        placeholder="Enter your Email"
+        oninvalid="this.setCustomValidity('Email Required')"
+        oninput="this.setCustomValidity('')"
+        required
+      />
+    </div>
+    <div class="form-element">
+      <label id="number-label" for="age"
+        >Age<span class="clue"></span></label
+      >
+      <input
+        type="number"
+        name="age"
+        id="age"
+        min="1"
+        max="150"
+        class="form-input"
+        placeholder="Age"
+        oninvalid="this.setCustomValidity('Age Required')"
+        oninput="this.setCustomValidity('')"
+        required
+      />
+    </div>
+    <div class="form-element">
+      <p>Which option best describes your current role?</p>
+      <select id="dropdown" name="role" class="form-input" oninvalid="this.setCustomValidity('Role Required')"
+      oninput="this.setCustomValidity('')" required>
+        <option disabled selected value>Select current role</option>
+        <option value="student">Student</option>
+        <option value="job">Full Time Job</option>
+        <option value="learner">Full Time Learner</option>
+        <option value="preferNo">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-element">
+      <p>Would you recommend freeCodeCamp to a friend?</p>
+      <label>
+        <input
+          name="user-recommend"
+          value="definitely"
+          type="radio"
+          class="input-radio"
+          checked
+        />Definitely</label
+      >
+      <label>
+        <input
+          name="user-recommend"
+          value="maybe"
+          type="radio"
+          class="input-radio"
+        />Maybe</label
+      >
+
+      <label
+        ><input
+          name="user-recommend"
+          value="not-sure"
+          type="radio"
+          class="input-radio"
+        />Not sure</label
+      >
+    </div>
+
+    <div class="form-element">
+      <p>
+        What is your favorite feature of freeCodeCamp?
+      </p>
+      <select id="most-like" name="mostLike" class="form-input" oninvalid="this.setCustomValidity('feature Required')"
+      oninput="this.setCustomValidity('')" required>
+        <option disabled selected value>Select an option</option>
+        <option value="challenges">Challenges</option>
+        <option value="projects">Projects</option>
+        <option value="community">Community</option>
+        <option value="openSource">Open Source</option>
+      </select>
+    </div>
+
+    <div class="form-element">
+      <p>
+        What would you like to see improved?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+
+      <label
+        ><input
+          name="prefer"
+          value="front-end-projects"
+          type="checkbox"
+          class="input-checkbox"
+
+          required
+
+        />Front-end Projects</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="back-end-projects"
+          type="checkbox"
+          class="input-checkbox"
+          //required
+
+        />Back-end Projects</label
+      >
+
+    </div>
+
+    <div class="form-element">
+      <p>Any comments or suggestions?</p>
+      <textarea
+        id="comment"
+        class="input-textarea"
+        name="comment"
+        placeholder = "Enter your comment here..."
+        oninvalid="this.setCustomValidity('Comment Required')"
+        oninput="this.setCustomValidity('')"
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-element">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+    <div class="form-group">
+      <button type="reset" id="reset" class="reset-button">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/form.js"></script>
+<script src="../js/jquery_validate.js"></script>
+</body>
+</html>
